@@ -24,3 +24,9 @@ SELECT * FROM animals;
 COMMIT;
 SELECT * FROM animals;
 
+/* DELETE all records*/
+BEGIN;
+DELETE FROM animals;
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
