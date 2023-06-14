@@ -25,3 +25,9 @@ CREATE TABLE species (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255)
 );
+
+/* Modified animals table */
+ALTER TABLE animals
+  ADD COLUMN species_id INTEGER REFERENCES species(id),
+  ADD COLUMN owner_id INTEGER REFERENCES owners(id),
+  DROP COLUMN species;
