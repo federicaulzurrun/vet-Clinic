@@ -66,3 +66,6 @@ CREATE TABLE visits (
       FOREIGN KEY (animal_id) REFERENCES animals(id)
       ON DELETE CASCADE
 );
+
+/* Add an email column owners table */
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
